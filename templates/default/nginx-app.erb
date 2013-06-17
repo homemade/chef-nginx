@@ -1,0 +1,11 @@
+server {
+  listen   80;
+  server_name  <%= @params[:server_name] %>;
+
+  access_log  <%= node['nginx']['log_dir'] %>/localhost.access.log;
+
+  location / {
+    root   <%= @params[:doc_root] %>;
+    index  index.html index.htm;
+  }
+}
