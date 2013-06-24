@@ -25,4 +25,4 @@ git "#{Chef::Config[:file_cache_path]}/ngx-http-substitutions-filter-module" do
 end
 
 node.run_state['nginx_configure_flags'] =
-  node.run_state['nginx_configure_flags'] | ["--add-module=#{Chef::Config[:file_cache_path]}/ngx_http_substitutions_filter_module"]
+  node.run_state['nginx_configure_flags'] | ["--add-module=#{Chef::Config[:file_cache_path]}/ngx-http-substitutions-filter-module"]
